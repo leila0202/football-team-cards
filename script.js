@@ -186,14 +186,14 @@ headCoach.textContent = coachName;
 
 The next step would be to display the word (Captain) next to the player if they are listed as a captain for the team.*/
 const setPlayerCards = (arr = players) => {
-  playerCards.innerHTML += arr.map(
-    ({ name, position, number, isCaptain, nickname }) => {
+  playerCards.innerHTML += arr
+    .map(({ name, position, number, isCaptain, nickname }) => {
       `<div class="player-card">
         <h2>${name} ${isCaptain ? "(Captain)" : ""}</h2>
         <p>Position: ${position}</p>
         <p>Number: ${number}</p>
         <p>Nickname: ${nickname !== null ? nickname : "N/A"}</p>
       </div>`;
-    }
-  );
+    })
+    .join("");
 };
