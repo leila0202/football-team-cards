@@ -199,5 +199,5 @@ const setPlayerCards = (arr = players) => {
 };
 
 playersDropdownList.addEventListener("change", (e) => {
-  console.log(e.target.value);
+  playerCards.innerHTML = "";
 });
